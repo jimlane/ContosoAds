@@ -23,7 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <ApplicationInsightsResourceId>/subscriptions/d7d3afe2-7897-46f4-aa62-70ab279dcc3e/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/ContosoAdsWeb</ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/d7d3afe2-7897-46f4-aa62-70ab279dcc3e/resourcegroups/ContosoAds/providers/microsoft.insights/components/ContosoAdsSite</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -198,9 +198,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Properties\webjobs-list.json" />
     <Content Include="ApplicationInsights.config" />
-    <None Include="Properties\PublishProfiles\contosoadpkg.pubxml" />
-    <None Include="Properties\PublishProfiles\contosoadsite.pubxml" />
-    <None Include="Properties\PublishProfiles\ContosoDemo2.pubxml" />
+    <None Include="Properties\PublishProfiles\ContosoAdsSite.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -235,6 +233,7 @@
     <Content Include="Views\Ad\Details.cshtml" />
     <Content Include="Views\Ad\Edit.cshtml" />
     <Content Include="Views\Ad\Index.cshtml" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,6 +251,9 @@
       <Project>{da8b60a3-dfbc-4205-8c5c-ba5af545584b}</Project>
       <Name>ContosoAdsCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

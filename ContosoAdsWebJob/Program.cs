@@ -20,6 +20,16 @@ namespace ContosoAdsWebJob
     {
         static void Main(string[] args)
         {
+            var _storageConn = ConfigurationManager
+                .ConnectionStrings["AzureWebJobsStorage"].ConnectionString;
+
+            var _dashboardConn = ConfigurationManager
+                .ConnectionStrings["AzureWebJobsDashboard"].ConnectionString;
+
+            JobHostConfiguration config = new JobHostConfiguration();
+            config.StorageConnectionString = _storageConn;
+            config.DashboardConnectionString = _dashboardConn;
+
             JobHost host = new JobHost();
             host.RunAndBlock();
         }
